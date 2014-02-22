@@ -16,7 +16,7 @@
 @import "fontawesome/font-awesome";
 
 // Glyphicons
-//@import "twitter/bootstrap/sprites.less";
+@import "twitter/bootstrap/sprites.less";
 
 // Your custom LESS stylesheets goes here
 //
@@ -28,3 +28,17 @@
 //
 // Example:
 // @linkColor: #ff0000;
+@mainbar: #428bca;
+@text-white: #fff;
+
+.main-bar {
+	.navbar-inner {
+		background: @mainbar;
+		border: none;
+		border-radius: 0;
+		a {
+			color: @text-white;
+			text-shadow: none;
+		}
+	}
+}
