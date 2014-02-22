@@ -1,4 +1,10 @@
 OccupationalHealth::Application.routes.draw do
+  resources :questions
+
+  resources :question_types
+
+  resources :categories
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
