@@ -1,6 +1,8 @@
 OccupationalHealth::Application.routes.draw do
 
-  root 'questions#index'
+  resources :project_profiles
+
+  root 'home#index'
 
   resources :questions
   resources :question_types

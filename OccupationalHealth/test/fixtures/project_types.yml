@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_profile_id: 1
+  university_research: false
+  government_institution: false
+  ngo: false
+  several: false
+  another: MyString
+
+two:
+  project_profile_id: 1
+  university_research: false
+  government_institution: false
+  ngo: false
+  several: false
+  another: MyString

@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Question -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Category:</strong>
-  <%= @question.category_id %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:category_id) %>:</strong></dt>
+  <dd><%= @question.category_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:answer_type_id) %>:</strong></dt>
+  <dd><%= @question.answer_type_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @question.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:language_key) %>:</strong></dt>
+  <dd><%= @question.language_key %></dd>
+</dl>
 
-<p>
-  <strong>Answer type:</strong>
-  <%= @question.answer_type_id %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @question.description %>
-</p>
-
-<p>
-  <strong>Language key:</strong>
-  <%= @question.language_key %>
-</p>
-
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              questions_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_question_path(@question), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              question_path(@question),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

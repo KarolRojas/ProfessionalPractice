@@ -29,7 +29,7 @@
 // Example:
 // @linkColor: #ff0000;
 @mainbar: #428bca;
-@text-white: #fff;
+@white: #fff;
 
 .main-bar {
 	.navbar-inner {
@@ -37,8 +37,25 @@
 		border: none;
 		border-radius: 0;
 		a {
-			color: @text-white;
+			color: @white;
 			text-shadow: none;
+		}
+	}
+}
+.categories-bar {
+	.nav-list {
+		li {
+			padding: 3px 0px;
+			:hover {
+				background: @mainbar;
+				color: @white;
+			}
+			a {
+				color: @mainbar;
+				:hover {
+					background: @mainbar;
+				}
+			}
 		}
 	}
 }

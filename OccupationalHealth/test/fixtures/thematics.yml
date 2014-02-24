@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_profile_id: 1
+  minery: false
+  pesticides: false
+  occupational_health: false
+  account_management: false
+  solid_waste: false
+  public_health: false
+  animal_health: false
+  another: MyString
+
+two:
+  project_profile_id: 1
+  minery: false
+  pesticides: false
+  occupational_health: false
+  account_management: false
+  solid_waste: false
+  public_health: false
+  animal_health: false
+  another: MyString

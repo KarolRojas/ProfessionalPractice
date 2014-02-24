@@ -1,0 +1,79 @@
+<div class="span12">
+  <div class="page-header">
+    <h1><%= @categories.first.name %></h1>
+  </div>
+</div>
+<div class="span2">
+  <div class="sidebar-nav categories-bar">
+    <ul class="nav nav-list">
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, "#" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div class="span10">
+  <%= form_for @project_profile, :html => { :class => 'form-horizontal' } do |f| %>
+    <%= f.hidden_field :category_id %>
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :validity, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :validity, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :region, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :region, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :institution_name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :institution_name, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :description, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :description, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :objectives, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :objectives, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :scale, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :scale, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :context, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :context, :class => 'text_field' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :disciplines, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :disciplines, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  project_profiles_path, :class => 'btn' %>
+    </div>
+  <% end %>
+</div>
